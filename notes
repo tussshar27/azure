@@ -1,0 +1,21 @@
+Microsoft Entra ID (Azure Active Directory):
+it follows two parts:
+1. Authentication
+2. Authorization
+
+1. Authentication:
+verifies your identity.
+Before authorization.
+in Azure: ADF, Synapse, or Databricks authenticates using Managed Identity or Azure AD token
+eg, user, group
+
+2. Authorization:
+grants or restricts access to resources.
+After authentication.
+in Azure: Then that identity is authorized via IAM role (like “Storage Blob Data Contributor”)
+eg, Role
+
+| Step | Concept            | Example                                                                         |
+| ---- | ------------------ | ------------------------------------------------------------------------------- |
+| 1️⃣  | **Authentication** | You swipe your access card at office gate → verifies your identity.             |
+| 2️⃣  | **Authorization**  | The system checks your role — you can enter your floor but not the server room. |
