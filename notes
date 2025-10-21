@@ -10,7 +10,7 @@ in Azure: ADF, Synapse, or Databricks authenticates using Managed Identity or Az
 eg, user, group
 
 2. Authorization:
-grants or restricts access to resources.
+grants or restricts access to resources. Controls access and permissions.
 After authentication.
 in Azure: Then that identity is authorized via IAM role (like “Storage Blob Data Contributor”)
 eg, Role
@@ -19,3 +19,35 @@ eg, Role
 | ---- | ------------------ | ------------------------------------------------------------------------------- |
 | 1️⃣  | **Authentication** | You swipe your access card at office gate → verifies your identity.             |
 | 2️⃣  | **Authorization**  | The system checks your role — you can enter your floor but not the server room. |
+
+Example:
+
+When Azure Databricks connects to ADLS using a Managed Identity →
+Authentication: Databricks proves its identity using the Managed Identity token.
+Authorization: ADLS checks RBAC roles (e.g., Storage Blob Data Contributor) to decide if Databricks can read/write files.
+
+Users:
+go to azure portal > search for Microsoft Entra ID >  click on Users from left menu > click on create new user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
