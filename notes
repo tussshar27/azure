@@ -30,13 +30,24 @@ Users:
 go to azure portal > search for Microsoft Entra ID >  click on Users from left menu > click on create new user
 
 Concept:
-when we want to communicate any resource through user then we have to assign roles to the user or group.
-when we want to commnunicate between any two azure resources then we have to create Managed Identity or Service Principal.
+when we want to communicate any resource with user then we have to assign roles to the user or group.
+when we want to commnunicagte between any two azure resources then we have to create Managed Identity or Service Principal.
 
-RECHECK THE VIDEO- for user there is only role but for resource there are two options i.e. Managed Identity and Service Principal.
-what is the difference between both?
-In service principal, we need to rotate access key token for every 90 or 270 or 360 days to make it safer
-But in Managed Identity, azure takes care of the access key token rotation, and we don't have to worry about it.
+for user there is only role but for resource there are two options i.e. Managed Identity and Service Principal.
+what is the difference between Managed Identity and Service Principal?
+managed identity is used to establish connection between two azure services 
+whereas as service principal is used to establish connection between an external service and azure cloud service.
+Whether we create managed identity or service principal, under the hood azure will also create service principal.
+In service principal, we need to rotate access key token for every 90 or 270 or 360 days to make it secure as well so that no other can access it.
+But in Managed Identity, azure takes care of the access key token rotation, and we don't have to worry about its security as well.
+
+there are two managed identity:
+1.	System assigned managed identity
+It is by default created when the resource is created and it is attached to its resource lifecycle.
+2.	User assigned managed identity
+It is created by user which can be used by multiple azure resources.
+
+
 
 
 
